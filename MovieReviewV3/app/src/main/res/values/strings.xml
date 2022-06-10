@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Movie Review</string>
+
+
+    //suicide squad
+    <string name="desc_suicide_squad">
+        The government sends the most dangerous supervillains in the world -- Bloodsport, Peacemaker, King Shark, Harley Quinn and others -- to the remote, enemy-infused island of Corto Maltese. Armed with high-tech weapons, they trek through the dangerous jungle on a search-and-destroy mission, with only Col. Rick Flag on the ground to make them behave.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--
+    <string-array name="sorting_options">
+        <item>None</item>
+        <item>Rating</item>
+        <item>Date</item>
+        <item>Mystery</item>
+        <item>Comedy</item>
+        <item>Action</item>
+        <item>Thriller</item>
+        <item>Drama</item>
+        <item>Romance</item>
+    </string-array>
+    -->
+</resources>
+

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/actor_profile_navbar"
+                layout="@layout/layout_common_navber"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentTop="true" />
+
+            <RelativeLayout
+                android:id="@+id/rella"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:layout_below="@+id/actor_profile_navbar"
+                android:paddingTop="20dp">
+
+                <ImageView
+                    android:id="@+id/a_img"
+                    android:layout_width="140dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/actor_idris_elba" />
+
+                <TextView
+                    android:id="@+id/a_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/a_img"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:text="Idrissa Akuna Elba OBE is an English actor, producer and musician. He is known for roles including Stringer Bell in the HBO series The Wire, DCI John Luther in the BBC One series Luther, and Nelson Mandela in the biographical film Mandela: Long Walk to Freedom."
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/born_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a_desc"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_toRightOf="@+id/a_img"
+                    android:text="Born: November 25,1979"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/actor_rel_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rella"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:id="@+id/a_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/a_age_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a_age"
+                    android:layout_marginBottom="15dp"
+                    android:text="42"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/a_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a_age_data"
+                    android:text="Date of Birth:"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/a_dob_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a_dob"
+                    android:layout_marginBottom="15dp"
+                    android:text="27 november,1979"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/a_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a_dob_data"
+                    android:text="Movies:"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/a_movies_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/a_movies"
+                    android:layout_marginBottom="15dp"
+                    android:text="Suicde Squad, Suicide Squad2"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

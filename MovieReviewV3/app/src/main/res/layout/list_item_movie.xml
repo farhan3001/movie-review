@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        app:cardCornerRadius="11dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#262624">
+
+            <ImageView
+                android:id="@+id/list_movie_image"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/list_movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/list_movie_image"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Movie Name"
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/list_movie_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_movie_name"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/list_movie_image"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Movie Date"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/list_movie_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_movie_name"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/list_movie_year"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Rating"
+                android:textColor="@color/gold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_movie_name"
+                android:layout_alignBottom="@+id/list_movie_rating"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/list_movie_rating"
+                android:src="@drawable/ic_baseline_star_12" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

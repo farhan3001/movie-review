@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    tools:context=".Fragment_Home">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="100dp">
+
+            <RelativeLayout
+                android:id="@+id/ho_rel_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.Toolbar
+
+                    android:id="@+id/home_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/black"
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="?attr/actionBarTheme"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title="Home" />
+
+                <FrameLayout
+                    android:id="@+id/homeframeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/home_toolbar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.11">
+
+                    <VideoView
+                        android:id="@+id/home_trailer_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="223dp" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/home_trailer_poster"
+                    android:layout_width="125dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="150dp"
+                    android:src="@drawable/poster_suicide_squad" />
+
+                <TextView
+                    android:id="@+id/home_movie_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homeframeLayout"
+                    android:layout_marginTop="9dp"
+                    android:layout_toRightOf="@+id/home_trailer_poster"
+                    android:text="Suicide Squad"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/home_movie_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_movie_name"
+                    android:layout_toRightOf="@+id/home_trailer_poster"
+                    android:text="2021"
+                    android:textColor="@color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/home_movies_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_movie_year">
+
+
+                    <TextView
+                        android:id="@+id/home_movies_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="All Movies"
+                        android:textColor="@color/gold"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/home_movies_text"
+                        android:background="@color/dark_gray"
+                        android:paddingHorizontal="8dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/home_movies_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/born_today_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_movies_container"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/born_today_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:paddingHorizontal="10dp"
+                        android:text="Born Today"
+                        android:textColor="@color/gold"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/born_today_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/dark_gray_background_round"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="3dp"
+                        android:backgroundTint="@color/light_gray"
+                        android:text="SEE ALL"
+                        android:textColor="@color/link_blue"
+                        android:textStyle="normal"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <LinearLayout
+                        android:id="@+id/cast_recycler_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/born_today_text"
+                        android:background="@color/dark_gray"
+                        android:paddingHorizontal="8dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/home_cast_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/news_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/born_today_container"
+                    android:background="@color/light_gray">
+
+                    <TextView
+                        android:id="@+id/news_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/light_gray"
+                        android:paddingHorizontal="10dp"
+                        android:text="Top News"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/news_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/dark_gray_background_round"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="3dp"
+                        android:text="SEE ALL"
+                        android:textColor="@color/link_blue"
+                        android:textStyle="normal"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <ImageView
+                        android:id="@+id/new_poster"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/news_text"
+                        android:src="@drawable/withcer" />
+
+                    <TextView
+                        android:id="@+id/txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/new_poster"
+                        android:layout_marginVertical="15dp"
+                        android:layout_toRightOf="@+id/new_poster"
+                        android:ellipsize="end"
+                        android:paddingHorizontal="10dp"
+                        android:text="Netflix's 'The Witcher: Blood Origin' Adds 10 to Cast, Sets"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt3"
+                        android:layout_toRightOf="@+id/new_poster"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:paddingHorizontal="10dp"
+                        android:text="'The Witche: Blood Origin' Netflix's live action prequel series to the fantasy show starring Henry Cavill, is set to release on 29th of Septer, 2021. The show aims to tell the tail of the fallen King."
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

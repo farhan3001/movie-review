@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dark_gray_border"
+    android:paddingVertical="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#262624">
+
+        <ImageView
+            android:id="@+id/actor_v_image"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/actor_v_n_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="49dp"
+            android:layout_toRightOf="@+id/actor_v_image"
+            android:text="Actor Name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/actor_v_d_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/actor_v_n_tv"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/actor_v_image"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Actor Role"
+            android:textColor="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

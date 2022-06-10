@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="220dp"
+            android:layout_height="160dp"
+            android:background="@color/light_gray">
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_star_17"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/review_item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/star"
+                android:text="8"
+                android:textColor="@color/gold"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/reviewer_name_tv"
+                android:layout_toRightOf="@+id/review_item_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reviewer Name"
+                android:layout_marginHorizontal="10dp"
+                android:layout_alignBaseline="@+id/review_item_rating"
+                android:textColor="@color/gold"/>
+
+            <TextView
+                android:id="@+id/review_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_item_rating"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Review Title"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/review_item_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_item_title"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="5dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:text="Review Description"
+                android:textColor="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
